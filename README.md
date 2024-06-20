@@ -57,7 +57,7 @@ book-management-backend/
 │   │   │   │   │   │   ├── graphql/
 │   │   │   │   │   │   ├── BookManagementApplication.java
 │   ├── resources/
-│   │   ├── application.yml
+│   │   ├── application.properties
 ├── .gitignore
 ├── pom.xml
 ├── README.md
