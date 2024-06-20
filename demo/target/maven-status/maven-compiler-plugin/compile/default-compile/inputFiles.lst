@@ -1,0 +1,10 @@
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\BookManagementApplication.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\config\GraphQLConfig.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\cors\CorsFilter.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\cors\webConfig.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\entity\Book.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\graphql\MutationResolver.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\graphql\QueryResolver.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\repo\BookRepository.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\repo\BookServiceApplication.java
+C:\Users\NandiNothando\Downloads\demo\src\main\java\com\example\demo\service\BookService.java

@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.BookManagementApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.813 s <<< FAILURE! -- in com.example.demo.BookManagementApplicationTests
+com.example.demo.BookManagementApplicationTests.contextLoads -- Time elapsed: 0.018 s <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@57bd802b testClass = com.example.demo.BookManagementApplicationTests, locations = [], classes = [com.example.demo.BookManagementApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@10289886, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7068e664, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4a07d605, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4c5ae43b, org.springframework.boot.test.context.SpringBootTestAnnotation@f989fde5], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:782)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.IllegalStateException: java.lang.NoSuchMethodError: 'void graphql.schema.GraphQLScalarType.<init>(java.lang.String, java.lang.String, graphql.schema.Coercing)'
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:825)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: java.lang.NoSuchMethodError: 'void graphql.schema.GraphQLScalarType.<init>(java.lang.String, java.lang.String, graphql.schema.Coercing)'
+	at graphql.scalars.datetime.DateTimeScalar.<init>(DateTimeScalar.java:27)
+	at graphql.scalars.ExtendedScalars.<clinit>(ExtendedScalars.java:42)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
+	at java.base/java.lang.reflect.Field.acquireFieldAccessor(Field.java:1185)
+	at java.base/java.lang.reflect.Field.getFieldAccessor(Field.java:1164)
+	at java.base/java.lang.reflect.Field.get(Field.java:442)
+	at graphql.kickstart.spring.web.boot.GraphQLExtendedScalarsInitializer.lambda$initialize$1(GraphQLExtendedScalarsInitializer.java:31)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:728)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:707)
+	at graphql.kickstart.spring.web.boot.GraphQLExtendedScalarsInitializer.initialize(GraphQLExtendedScalarsInitializer.java:25)
+	at graphql.kickstart.spring.web.boot.GraphQLExtendedScalarsInitializer.initialize(GraphQLExtendedScalarsInitializer.java:17)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:627)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:401)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	... 26 more
+

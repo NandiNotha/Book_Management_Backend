@@ -1,0 +1,9 @@
+com\example\demo\config\GraphQLConfig.class
+com\example\demo\cors\CorsFilter.class
+com\example\demo\graphql\QueryResolver.class
+com\example\demo\BookManagementApplication.class
+com\example\demo\cors\webConfig.class
+com\example\demo\graphql\MutationResolver.class
+com\example\demo\entity\Book.class
+com\example\demo\repo\BookRepository.class
+com\example\demo\service\BookService.class
